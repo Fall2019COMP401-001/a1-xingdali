@@ -69,8 +69,8 @@ public class A1Adept {
 		}
 		scan.close();
 		average = sum / costumers.length;
-		System.out.println("Biggest: " + recentMaxFirstName + " " + recentMaxLastName + " (" + max + ")");
-		System.out.println("Smallest: " + recentMinFirstName + " " + recentMinLastName + " (" + min + ")");
-		System.out.println("Average: " + average);
+		System.out.println("Biggest: " + recentMaxFirstName + " " + recentMaxLastName + " (" + String.format("%.2f", max) + ")");
+		System.out.println("Smallest: " + recentMinFirstName + " " + recentMinLastName + " (" + String.format("%.2f", min) + ")");
+		System.out.println("Average: " + String.format("%.2f", average));
 	}
 }

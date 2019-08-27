@@ -21,7 +21,7 @@ public class A1Novice {
 				double price = scan.nextDouble();
 				sum += number * price; // sum the total price
 			}
-			System.out.println(firstName.substring(0, 1) + ". " + lastName + ": " + sum); //output bills
+			System.out.println(firstName.substring(0, 1) + ". " + lastName + ": " + String.format("%.2f", sum)); //output bills
 		}
 		scan.close();
 	}
