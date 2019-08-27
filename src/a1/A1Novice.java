@@ -9,15 +9,15 @@ public class A1Novice {
 		Scanner scan = new Scanner(System.in);
 
 		// Your code follows here.
-		int numberOfCostumers = scan.nextInt();
-		for (int i = 0; i < numberOfCostumers; i++) { //go through every costumer.
+		int numberOfCustomers = scan.nextInt();
+		for (int i = 0; i < numberOfCustomers; i++) { //go through every costumer.
 			String firstName = scan.next();
 			String lastName = scan.next();
 			int numberOfGoods = scan.nextInt();
 			double sum = 0;
 			for (int j = 0; j < numberOfGoods; j++) { //go through every single good
 				int number = scan.nextInt();
-				String nameOfGoods = scan.next();
+				scan.next();
 				double price = scan.nextDouble();
 				sum += number * price; // sum the total price
 			}
