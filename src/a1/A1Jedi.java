@@ -22,20 +22,21 @@ public class A1Jedi {
 		int numberBought = 0; //the number of each item they bought
 		int[] customersNumber = new int[numberOfItems]; //get the total number of customers who bought certain item in the list.
 		String name = null;
-		boolean ifAdd = false;
 		for (int i = 0; i < numberOfCostumers; i ++) {
 			scan.next();
 			scan.next();
 			number = scan.nextInt();
-			
+			boolean[] ifAdd = new boolean[numberOfItems];
 			for (int j = 0; j < number; j++) {
 				numberBought = scan.nextInt();
 				name = scan.next();
 				for (int a = 0; a < numberOfItems; a++) { // find the index of the goods in the shopping list
 					if (shoppingList[a].equals(name)) {
 						itemNumber[a] += numberBought;
-						ifAdd = true;
-						break; //stop the loop once find the item in the shopping list
+						if (!ifAdd[a]) {
+							customersNumber[a]++;
+						}
+						ifAdd[a] = true;//stop the loop once find the item in the shopping list
 					}
 				}
 			}
